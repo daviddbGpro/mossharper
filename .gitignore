@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.env
+**/.env.*
+**/appsettings.Development.json
+**/appsettings.Production.json
+*.user
+*.suo
+*.tar
+*.zip
+Moss_Harper_Website_V1_6_Full_Content_Review.pdf
