@@ -15,8 +15,15 @@ public sealed class ContactModel(IContactMailer mailer) : PageModel
     [BindProperty]
     public string? Website { get; set; }
 
-    [TempData]
-    public string? SuccessMessage { get; set; }
+    public string? SuccessMessage { get; private set; }
+
+    public void OnGet(bool again = false)
+    {
+        if (again)
+            TempData.Remove(nameof(SuccessMessage));
+        else
+            SuccessMessage = TempData[nameof(SuccessMessage)] as string;
+    }
 
     public async Task<IActionResult> OnPostSendAsync(CancellationToken cancellationToken)
     {
@@ -36,13 +43,14 @@ public sealed class ContactModel(IContactMailer mailer) : PageModel
             return ContactResult();
         }
 
+        const string successMessage = "Thank you. Your enquiry has been received.";
         if (Request.Headers.ContainsKey("HX-Request"))
         {
-            SuccessMessage = "Thank you. Your enquiry has been received.";
+            SuccessMessage = successMessage;
             return Partial("_ContactForm", this);
         }
 
-        SuccessMessage = "Thank you. Your enquiry has been received.";
+        TempData[nameof(SuccessMessage)] = successMessage;
         return RedirectToPage();
     }
 

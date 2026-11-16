@@ -3,3 +3,4 @@
 .service-detail-list .service-detail:nth-child(even){background:var(--cream)}.service-detail-list .service-detail:nth-child(odd){background:var(--paper)}
 .detail-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(3rem,9vw,9rem)}.detail-grid h2{max-width:550px}.detail-grid>div:last-child{color:var(--muted)}.detail-grid .detail-lead{font-size:1.3rem;color:var(--ink);line-height:1.45}.detail-grid h3{font-family:'DM Sans',Arial,sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.17em;color:#8d6f49;margin-top:2.4rem}.detail-grid ul{padding-left:1.2rem;margin:0}.detail-grid li{padding:.4rem 0}.detail-grid blockquote{border-left:2px solid var(--gold);margin:2rem 0;padding-left:1.4rem;color:var(--forest);font-family:'Libre Caslon Display',Georgia,serif;font-size:1.7rem;line-height:1.2}
 @media(max-width:800px){.detail-grid{grid-template-columns:1fr}}
+.success-actions{display:flex;flex-wrap:wrap;gap:1rem 2rem}
