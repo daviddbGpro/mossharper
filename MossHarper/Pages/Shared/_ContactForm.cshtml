@@ -2,7 +2,7 @@
 <div id="contact-form">
 @if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
 {
-    <div class="form-success" role="status"><span aria-hidden="true">✓</span><h2>Enquiry received</h2><p>@Model.SuccessMessage</p><div class="success-actions"><a asp-page="/Contact" asp-route-again="true">Send another enquiry</a><a asp-page="/Index">Return to home</a></div></div>
+    <div class="form-success" role="status"><span aria-hidden="true">✓</span><h2>Enquiry received</h2><p>@Model.SuccessMessage</p><div class="success-actions"><a asp-page="/Contact" asp-route-again="true" asp-fragment="contact">Send another enquiry</a><a asp-page="/Index">Return to home</a></div></div>
 }
 else
 {

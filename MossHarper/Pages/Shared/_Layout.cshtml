@@ -19,7 +19,7 @@
                 <a asp-page="/Services">Expertise</a>
                 <a asp-page="/Index" asp-fragment="approach">Approach</a>
                 <a asp-page="/Index" asp-fragment="leadership">Leadership</a>
-                <a class="nav-contact" asp-page="/Contact">Contact <span aria-hidden="true">↗</span></a>
+                <a class="nav-contact" asp-page="/Contact" asp-fragment="contact">Contact <span aria-hidden="true">↗</span></a>
             </nav>
         </div>
     </header>
@@ -27,7 +27,7 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div><span class="wordmark">MOSS <span>HARPER</span></span><p>Independent property &amp; operational advisory.</p></div>
-            <div class="footer-links"><a asp-page="/Contact">Start a conversation</a><a asp-page="/Privacy">Privacy</a></div>
+            <div class="footer-links"><a asp-page="/Contact" asp-fragment="contact">Start a conversation</a><a asp-page="/Privacy">Privacy</a></div>
         </div>
         <div class="container footer-bottom"><span>© @DateTime.UtcNow.Year Moss Harper Ltd</span><span>Company no. 17541863</span></div>
     </footer>
