@@ -24,6 +24,8 @@ Build from this directory with `docker build -t moss-harper .`. Run the containe
 
 Set `ReverseProxy__KnownProxies__0` to the reverse proxy's IP address as seen by the app. The app will then use its forwarded scheme and client IP for HTTPS redirects and IP-based rate limiting. Mount a persistent, app-writable volume for ASP.NET Core Data Protection keys and set `DataProtection__KeysPath` to its container path. This keeps antiforgery tokens valid through restarts. Keep the app port private to the VM or container network; only the proxy should accept public traffic.
 
+For Hetzner Cloud, set `GmailSmtp__Port=587`. The mailer uses STARTTLS on 587 and keeps the same Gmail username and app password. Port 465 remains the default for existing deployments.
+
 ## Before public launch
 
 - Verify the company name, number and registered-office wording against official records.

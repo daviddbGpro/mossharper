@@ -22,6 +22,12 @@ public sealed class GmailSmtpContactMailer(
             return false;
         }
 
+        if (gmail.Port is not (465 or 587))
+        {
+            logger.LogError("Gmail SMTP port must be 465 or 587.");
+            return false;
+        }
+
         try
         {
             var mail = new MimeMessage();
@@ -38,7 +44,8 @@ public sealed class GmailSmtpContactMailer(
             };
 
             using var client = new SmtpClient { Timeout = 15000 };
-            await client.ConnectAsync("smtp.gmail.com", 465, SecureSocketOptions.SslOnConnect, cancellationToken);
+            var security = gmail.Port == 587 ? SecureSocketOptions.StartTls : SecureSocketOptions.SslOnConnect;
+            await client.ConnectAsync("smtp.gmail.com", gmail.Port, security, cancellationToken);
             await client.AuthenticateAsync(gmail.Username.Trim(), gmail.AppPassword.Replace(" ", ""), cancellationToken);
             await client.SendAsync(mail, cancellationToken);
             await client.DisconnectAsync(true, cancellationToken);
