@@ -28,6 +28,6 @@ Set `ReverseProxy__KnownProxies__0` to the reverse proxy's IP address as seen by
 
 - Verify the company name, number and registered-office wording against official records.
 - Replace the pre-launch privacy information with an approved notice and confirmed contact details and response time.
-- Replace `wwwroot/images/julian-harper-brown-temporary.jpg` with Julian Harper-Brown's final approved headshot and confirm its usage rights.
+- Confirm Julian Harper-Brown has approved publication of the supplied portrait in `wwwroot/images/julian-harper-brown.png`.
 - Have Julian create a dedicated Google app password, store it privately on the server, and test end-to-end delivery before publishing the form.
 - Review the building safety, tribunal and heat-network copy with the business owner.
