@@ -1,0 +1,42 @@
+services:
+  app:
+    build:
+      context: ../../MossHarper
+    env_file: .env
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      DataProtection__KeysPath: /app/keys
+      GmailSmtp__Port: "587"
+      ReverseProxy__KnownProxies__0: 172.30.90.2
+    volumes:
+      - data_protection_keys:/app/keys
+    networks:
+      - private
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      private:
+        ipv4_address: 172.30.90.2
+    depends_on:
+      - app
+    restart: unless-stopped
+
+networks:
+  private:
+    ipam:
+      config:
+        - subnet: 172.30.90.0/24
+
+volumes:
+  data_protection_keys:
+  caddy_data:
+  caddy_config:
