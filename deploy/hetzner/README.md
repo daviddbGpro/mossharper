@@ -6,7 +6,7 @@ This deployment runs the .NET site behind Caddy on the CPX12 Ubuntu server. Cadd
 
 - Confirm `mossharper.com` has an A record pointing to the server IPv4 address.
 - Open inbound TCP ports 80 and 443 in the Hetzner Cloud Firewall. Allow SSH (22) from your own IP address. Do not expose port 8080.
-- Install Docker Engine and the Docker Compose plugin using the [official Ubuntu instructions](https://docs.docker.com/engine/install/ubuntu/).
+- Install Docker Engine and the Docker Compose plugin using the [official Ubuntu instructions](https://docs.docker.com/engine/install/ubuntu/). The included `bootstrap.sh` applies those instructions on a fresh Ubuntu server after cloning the repository; run it as root.
 - Have Julian's Gmail app password ready. Do not put it in Git or send it in chat.
 
 ## First deployment
