@@ -34,7 +34,7 @@ public sealed class ContactModel(IContactMailer mailer) : PageModel
             return ContactResult();
 
         var sent = await mailer.SendAsync(
-            Input.Name.Trim(), Input.Email.Trim(), Input.Organisation?.Trim() ?? "",
+            Input.Name.Trim(), Input.Email.Trim(), Input.Organisation?.Trim() ?? "", Input.Role?.Trim() ?? "",
             Input.Message.Trim(), cancellationToken);
 
         if (!sent)
@@ -71,6 +71,9 @@ public sealed class ContactModel(IContactMailer mailer) : PageModel
 
         [StringLength(150)]
         public string? Organisation { get; set; }
+
+        [StringLength(80)]
+        public string? Role { get; set; }
 
         [Required(ErrorMessage = "Tell us about your enquiry.")]
         [StringLength(5000, MinimumLength = 10, ErrorMessage = "Your message must be between 10 and 5,000 characters.")]

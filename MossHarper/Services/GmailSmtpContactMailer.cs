@@ -10,7 +10,7 @@ public sealed class GmailSmtpContactMailer(
     IOptions<ContactDeliveryOptions> deliveryOptions,
     ILogger<GmailSmtpContactMailer> logger) : IContactMailer
 {
-    public async Task<bool> SendAsync(string name, string email, string organisation, string message, CancellationToken cancellationToken)
+    public async Task<bool> SendAsync(string name, string email, string organisation, string role, string message, CancellationToken cancellationToken)
     {
         var gmail = gmailOptions.Value;
         var delivery = deliveryOptions.Value;
@@ -40,7 +40,7 @@ public sealed class GmailSmtpContactMailer(
             mail.Subject = "Website enquiry | Moss Harper";
             mail.Body = new TextPart("plain")
             {
-                Text = $"Name: {name}\nEmail: {email}\nOrganisation: {organisation}\n\nMessage:\n{message}"
+                Text = $"Name: {name}\nEmail: {email}\nOrganisation: {organisation}\nRole: {role}\n\nMessage:\n{message}"
             };
 
             using var client = new SmtpClient { Timeout = 15000 };

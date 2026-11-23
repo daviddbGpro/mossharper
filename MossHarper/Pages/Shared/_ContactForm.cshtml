@@ -9,12 +9,14 @@ else
     <form method="post" asp-page-handler="Send" hx-post="/Contact?handler=Send" hx-target="#contact-form" hx-swap="outerHTML">
         @Html.AntiForgeryToken()
         <div asp-validation-summary="ModelOnly" class="validation-summary" role="alert"></div>
-        <div class="field-row"><div class="field"><label for="name">Your name <span>*</span></label><input id="name" name="Input.Name" value="@Model.Input.Name" autocomplete="name" required maxlength="120" /><span asp-validation-for="Input.Name"></span></div><div class="field"><label for="email">Email address <span>*</span></label><input id="email" name="Input.Email" value="@Model.Input.Email" type="email" autocomplete="email" required maxlength="254" /><span asp-validation-for="Input.Email"></span></div></div>
-        <div class="field"><label for="organisation">Organisation <small>Optional</small></label><input id="organisation" name="Input.Organisation" value="@Model.Input.Organisation" autocomplete="organization" maxlength="150" /></div>
-        <div class="field"><label for="message">How can we help? <span>*</span></label><textarea id="message" name="Input.Message" rows="7" required minlength="10" maxlength="5000">@Model.Input.Message</textarea><span asp-validation-for="Input.Message"></span></div>
+        <div class="field"><label for="name">Name <span>*</span></label><input id="name" name="Input.Name" value="@Model.Input.Name" autocomplete="name" placeholder="Your name" required maxlength="120" /><span asp-validation-for="Input.Name"></span></div>
+        <div class="field"><label for="organisation">Organisation <small>(optional)</small></label><input id="organisation" name="Input.Organisation" value="@Model.Input.Organisation" autocomplete="organization" placeholder="Organisation / company" maxlength="150" /></div>
+        <div class="field"><label for="role">I am a… <small>(optional)</small></label><select id="role" asp-for="Input.Role"><option value="">Please select</option><option value="Developer or investor">Developer or investor</option><option value="Freeholder or asset owner">Freeholder or asset owner</option><option value="Managing agent or property business">Managing agent or property business</option><option value="RMC or RTM director">RMC or RTM director</option><option value="Leaseholder or resident">Leaseholder or resident</option><option value="Other">Other</option></select><span asp-validation-for="Input.Role"></span></div>
+        <div class="field"><label for="email">Email <span>*</span></label><input id="email" name="Input.Email" value="@Model.Input.Email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254" /><span asp-validation-for="Input.Email"></span></div>
+        <div class="field"><label for="message">Your challenge <span>*</span></label><textarea id="message" name="Input.Message" rows="5" placeholder="A brief description of the issue…" required minlength="10" maxlength="5000">@Model.Input.Message</textarea><span asp-validation-for="Input.Message"></span></div>
         <div class="trap" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="Website" tabindex="-1" autocomplete="off" /></div>
-        <p class="privacy-copy">We use the details you provide to respond to your enquiry. Read our <a asp-page="/Privacy">privacy information</a>.</p>
-        <button class="button button-dark" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+        <button class="v17-button v17-button-gold" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+        <p class="privacy-copy">Your details will be used to respond to your enquiry. Please avoid including confidential documents. Read our <a asp-page="/Privacy">privacy information</a>.</p>
     </form>
 }
 </div>

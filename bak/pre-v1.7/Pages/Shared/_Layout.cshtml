@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f2b24" />
+    <meta name="description" content="Moss Harper provides independent property and operational advisory for complex residential and mixed-use estates." />
+    <title>@ViewData["Title"] | Moss Harper</title>
+    <link rel="stylesheet" asp-href-include="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site-extra.css" asp-append-version="true" />
+    <script src="~/htmx.min.js" asp-append-version="true" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="wordmark" asp-page="/Index" aria-label="Moss Harper home">MOSS <span>HARPER</span></a>
+            <nav aria-label="Main navigation">
+                <a asp-page="/Services">Expertise</a>
+                <a asp-page="/Index" asp-fragment="approach">Approach</a>
+                <a asp-page="/Index" asp-fragment="leadership">Leadership</a>
+                <a class="nav-contact" asp-page="/Contact" asp-fragment="contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+    <main id="main">@RenderBody()</main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><span class="wordmark">MOSS <span>HARPER</span></span><p>Independent property &amp; operational advisory.</p></div>
+            <div class="footer-links"><a asp-page="/Contact" asp-fragment="contact">Start a conversation</a><a asp-page="/Privacy">Privacy</a></div>
+        </div>
+        <div class="container footer-bottom"><span>© @DateTime.UtcNow.Year Moss Harper Ltd</span><span>Company no. 17541863</span></div>
+    </footer>
+</body>
+</html>

@@ -3,58 +3,77 @@
 @{
     ViewData["Title"] = "Independent property advisory";
 }
-<section class="hero">
-    <div class="container hero-grid">
-        <div>
-            <p class="eyebrow light">Independent property &amp; operational advisory</p>
-            <h1>Expertise for complex property challenges<span>.</span></h1>
-            <p class="hero-lead">Senior-led advice for residential and mixed-use estates.</p>
-            <p class="hero-detail">Managing agent performance, service-charge scrutiny, building safety, operational transformation and complex property disputes.</p>
-            <a class="button button-cream" asp-page="/Contact" asp-fragment="contact">Start a conversation <span aria-hidden="true">↗</span></a>
-        </div>
-        <aside class="hero-aside">
-            <span class="aside-line"></span>
-            <p class="eyebrow gold">Founder-led expertise</p>
-            <p>Julian Harper-Brown<br /><small>MTPI, AssocRICS</small></p>
-            <small>Former Managing Director and senior property executive with over 18 years’ experience in residential and complex mixed-use estate management.</small>
-        </aside>
+
+<section class="v17-hero" aria-labelledby="home-title">
+    <div class="v17-hero-copy">
+        <p class="v17-eyebrow v17-eyebrow-gold">Independent property &amp; operational advisory</p>
+        <h1 id="home-title">Expertise for complex property challenges.</h1>
+        <span class="v17-rule" aria-hidden="true"></span>
+        <p class="v17-hero-lead">Senior-led advice for residential and mixed-use estates.</p>
+        <p class="v17-hero-detail">Managing agent performance, service-charge scrutiny, building safety, operational transformation and complex property disputes.</p>
+        <a class="v17-button v17-button-light" asp-page="/Contact" asp-fragment="contact">Discuss your challenge <span aria-hidden="true">→</span></a>
     </div>
-    <div class="container hero-foot"><span>Independent advice. Practical outcomes.</span><span>01 / 04</span></div>
+    <div class="v17-hero-image" role="img" aria-label="Contemporary residential building in warm evening light"></div>
 </section>
-<section class="audience section-pad">
-    <div class="container two-col">
-        <div><p class="eyebrow">Who we work with</p><h2>Clear thinking for every side of an estate.</h2></div>
-        <div><p>Developers and investors · Freeholders and asset owners · Managing agents and property businesses · RMC and RTM directors · Leaseholders and resident groups</p></div>
+
+<div class="v17-founder-strip">
+    <div class="container v17-founder-inner"><span>Founder-led expertise</span><p><strong>Julian Harper-Brown, MTPI, AssocRICS</strong> · Former Managing Director and senior property executive with more than 18 years’ experience in residential and complex mixed-use estate management.</p></div>
+</div>
+
+<section class="v17-audience v17-section" aria-labelledby="audience-title">
+    <div class="container v17-audience-grid">
+        <div><p class="v17-eyebrow">Who we work with</p><h2 id="audience-title">Support for those responsible for complex property.</h2></div>
+        <ul class="v17-audience-tags">
+            <li>Developers &amp; investors</li><li>Freeholders &amp; asset owners</li><li>Managing agents &amp; property businesses</li><li>RMC &amp; RTM directors</li><li>Leaseholders &amp; resident groups</li>
+        </ul>
     </div>
 </section>
-<section id="services" class="services section-pad">
+
+<section class="v17-pillars" aria-label="Areas of advice">
+    <div class="container v17-pillars-grid">
+        <div><h3>Property &amp;<br />operational advisory</h3><p>Independent reviews, performance improvement and operational risk management.</p></div>
+        <div><h3>Strategic &amp;<br />commercial advisory</h3><p>Experienced judgement for complex decisions, asset owners, developers and investors.</p></div>
+        <div><h3>Early dispute<br />assessment &amp; resolution</h3><p>Establish the facts. Address the cause. Avoid unnecessary escalation.</p></div>
+    </div>
+</section>
+<p class="v17-statement">Clarity in complexity. Confidence in delivery.</p>
+
+<section class="v17-services-overview v17-section" aria-labelledby="services-title">
     <div class="container">
-        <p class="eyebrow">Where we can help</p>
-        <div class="section-heading"><h2>Experienced perspective.<br /><em>Practical direction.</em></h2><p>Seven areas of support across property performance, transformation, building safety and early resolution.</p></div>
-        <div class="service-list">
-            <article><span>01</span><div><h3><a asp-page="/Services" asp-fragment="managing-agent">Independent Managing Agent &amp; Operational Reviews</a></h3><p>Independent scrutiny of management performance, service delivery and accountability.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>02</span><div><h3><a asp-page="/Services" asp-fragment="service-charge">Service Charge Reviews &amp; Financial Performance</a></h3><p>Establishing whether expenditure is appropriate, justified and reflected in the services delivered.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>03</span><div><h3><a asp-page="/Services" asp-fragment="transformation">Strategic &amp; Operational Transformation</a></h3><p>Restructuring teams, improving operating models and strengthening performance through practical change.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>04</span><div><h3><a asp-page="/Services" asp-fragment="building-safety">Building Safety &amp; Regulatory Compliance</a></h3><p>Operational support for higher-risk buildings, building-safety governance and regulator engagement.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>05</span><div><h3><a asp-page="/Services" asp-fragment="heat-networks">Heat Networks &amp; Utility Management</a></h3><p>Clarifying performance, costs and responsibilities as heat networks enter Ofgem regulation.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>06</span><div><h3><a asp-page="/Services" asp-fragment="resident-engagement">Resident Engagement &amp; Communication</a></h3><p>Helping property businesses communicate clearly, respond consistently and rebuild confidence.</p></div><span aria-hidden="true">↗</span></article>
-            <article><span>07</span><div><h3><a asp-page="/Services" asp-fragment="dispute-resolution">Early Dispute Assessment, Resolution &amp; Tribunal Support</a></h3><p>Assessing the facts and respective positions early, before disputes escalate unnecessarily.</p></div><span aria-hidden="true">↗</span></article>
+        <div class="v17-section-intro"><div><p class="v17-eyebrow">Our services</p><h2 id="services-title">Where we can help.</h2><span class="v17-rule" aria-hidden="true"></span></div><div><p>Every property challenge has its own circumstances. We offer focused advice and practical support across the areas below, from independent assessment to carefully planned improvement.</p><a asp-page="/Services">Select a service to explore how Moss Harper may be able to assist. <span aria-hidden="true">→</span></a></div></div>
+        <div class="v17-service-links">
+            <a asp-page="/Services" asp-fragment="managing-agent"><span>01</span><strong>Independent Managing Agent &amp; Operational Reviews</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="service-charge"><span>02</span><strong>Service Charge Reviews &amp; Financial Performance</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="transformation"><span>03</span><strong>Strategic &amp; Operational Transformation</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="building-safety"><span>04</span><strong>Building Safety &amp; Regulatory Compliance</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="heat-networks"><span>05</span><strong>Heat Networks &amp; Utility Management</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="resident-engagement"><span>06</span><strong>Resident Engagement &amp; Communication</strong><span aria-hidden="true">→</span></a>
+            <a asp-page="/Services" asp-fragment="dispute-resolution"><span>07</span><strong>Early Dispute Assessment, Resolution &amp; Tribunal Support</strong><span aria-hidden="true">→</span></a>
         </div>
     </div>
 </section>
-<section id="approach" class="approach section-pad">
-    <div class="container"><p class="eyebrow light">The Moss Harper approach</p><h2>Assess. Advise. <em>Deliver.</em></h2>
-        <div class="approach-grid">
-            <div><span>01 / Assess</span><p>Establish the facts, understand the underlying causes and evaluate operational, commercial, regulatory and reputational risks.</p></div>
-            <div><span>02 / Advise</span><p>Challenge assumptions where necessary and recommend realistic options, priorities, responsibilities and next steps.</p></div>
-            <div><span>03 / Deliver</span><p>Where commissioned, coordinate the right expertise, support implementation and provide oversight of agreed improvements.</p></div>
+
+<section id="approach" class="v17-approach v17-section" aria-labelledby="approach-title">
+    <div class="container"><p class="v17-eyebrow">Our approach</p><h2 id="approach-title">Assess. Advise. Deliver.</h2><p class="v17-section-lead">Clear thinking, proportionate recommendations and practical support to move from assessment to action.</p>
+        <div class="v17-approach-grid">
+            <div><span>01</span><h3>Assess</h3><p>Establish the facts, understand the underlying causes and evaluate operational, commercial, regulatory and reputational risks.</p></div>
+            <div><span>02</span><h3>Advise</h3><p>Challenge assumptions where necessary and recommend realistic options, priorities, responsibilities and next steps.</p></div>
+            <div><span>03</span><h3>Deliver</h3><p>Where commissioned, coordinate the right expertise, support implementation and provide oversight of agreed improvements.</p></div>
         </div>
     </div>
 </section>
-<section id="leadership" class="leadership section-pad">
-    <div class="container two-col">
-        <div><p class="eyebrow">Experience &amp; leadership</p><h2>Experience that makes a difference.</h2><figure class="portrait-frame"><img src="~/images/julian-harper-brown.png" asp-append-version="true" width="1622" height="2048" alt="Julian Harper-Brown, founder of Moss Harper" loading="lazy" /></figure><p class="leader-name">Julian Harper-Brown <small>MTPI, AssocRICS</small></p><p>Founder, Moss Harper</p></div>
-        <div><p>Moss Harper draws on more than 18 years of operational experience across substantial residential and mixed-use developments, including higher-risk residential buildings, with a career progressing to senior executive leadership.</p><p>Julian has held Managing Director and senior estate leadership roles. His responsibilities have included oversight of portfolios of up to 9,000 homes and a client-side review of a proposed annual service-charge budget of approximately £50 million.</p><div class="stats"><div><strong>18+</strong><span>years in property</span></div><div><strong>9,000</strong><span>homes in portfolios overseen</span></div><div><strong>£50m</strong><span>proposed annual budget reviewed</span></div></div><small class="fine-print">Figures reflect previous executive appointments, not Moss Harper client assignments.</small></div>
+
+<section class="v17-why v17-section" aria-labelledby="why-title">
+    <div class="container"><div class="v17-why-grid"><div><p class="v17-eyebrow">Why Moss Harper?</p><h2 id="why-title">Identifying the problem is only the beginning.</h2><span class="v17-rule" aria-hidden="true"></span><p class="v17-why-quote">The real value lies in knowing how to resolve it.</p></div><div><p>Complex property challenges rarely sit within a single professional discipline. They can involve operational failings, financial exposure, technical concerns, stakeholder relationships and reputational risk.</p><p>Clients work directly with senior-level experience, candid judgement and a willingness to challenge assumptions, even when the conclusions are uncomfortable.</p><p><strong>Drawing on established professional relationships, Moss Harper helps clients identify and engage appropriately qualified specialists, bringing together the experience and resources needed to deliver workable solutions.</strong></p></div></div>
+        <div class="v17-independence"><p class="v17-eyebrow">Our independence</p><h3>Advice without hidden incentives.</h3><p>We do not accept referral fees, commissions or financial incentives from specialists we recommend. Recommendations are based on suitability, competence and the needs of the assignment.</p><p>We assess potential conflicts before accepting instructions and disclose relevant interests. Where we act for one party, our role is clear from the outset; that is distinct from acting as a neutral expert.</p></div>
     </div>
 </section>
-<section class="closing"><div class="container closing-inner"><div><p class="eyebrow light">Start a conversation</p><h2>What challenge are you trying to resolve?</h2></div><a class="button button-cream" asp-page="/Contact" asp-fragment="contact">Get in touch <span aria-hidden="true">↗</span></a></div></section>
+
+<section id="leadership" class="v17-leadership v17-section" aria-labelledby="leadership-title">
+    <div class="container v17-leadership-grid">
+        <div><figure class="v17-portrait"><img src="~/images/julian-harper-brown.png" asp-append-version="true" width="1622" height="2048" alt="Julian Harper-Brown, founder of Moss Harper" loading="lazy" /></figure><div class="v17-portrait-caption"><strong>Julian Harper-Brown</strong><span>MTPI · AssocRICS</span><span>Founder, Moss Harper</span></div></div>
+        <div><p class="v17-eyebrow">Experience &amp; leadership</p><h2 id="leadership-title">Experience that makes a difference.</h2><div class="v17-person-name"><strong>Julian Harper-Brown</strong><span>MTPI · AssocRICS</span><small>Founder · Moss Harper</small></div><p>Moss Harper draws on <strong>more than 18 years of operational experience</strong> across substantial residential and mixed-use developments, including higher-risk residential buildings, with a career progressing to senior executive leadership.</p><p>Julian has served as <strong>Managing Director of Galliard Estate Management</strong> and <strong>Head of Estates at Battersea Power Station</strong>. His responsibilities have included oversight of portfolios of up to 9,000 homes and a client-side review of a proposed annual service-charge budget of approximately £50 million.</p><p>His experience encompasses operational transformation, managing agent oversight, building safety, heat-network management, service-charge control and complex property disputes.</p><div class="v17-stats"><div><strong>18+ years</strong><span>Property-sector experience</span></div><div><strong>9,000</strong><span>Homes in portfolios overseen</span></div><div><strong>£50m</strong><span>Proposed annual budget reviewed</span></div></div><small class="v17-fine-print">Figures reflect previous executive appointments, not Moss Harper client assignments.</small><blockquote>Experience grounded in operational responsibility, with an emphasis on clear advice and practical outcomes.</blockquote><a class="v17-text-link" asp-page="/Contact" asp-fragment="contact">Discuss your challenge <span aria-hidden="true">→</span></a></div>
+    </div>
+</section>
+
+<section class="v17-closing"><div class="container"><p class="v17-eyebrow v17-eyebrow-gold">Start a conversation</p><h2>What challenge are you trying to resolve?</h2><a class="v17-button v17-button-gold" asp-page="/Contact" asp-fragment="contact">Discuss your challenge <span aria-hidden="true">→</span></a></div></section>

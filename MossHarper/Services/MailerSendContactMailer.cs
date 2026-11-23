@@ -11,7 +11,7 @@ public sealed class MailerSendContactMailer(
     IOptions<ContactDeliveryOptions> deliveryOptions,
     ILogger<MailerSendContactMailer> logger) : IContactMailer
 {
-    public async Task<bool> SendAsync(string name, string email, string organisation, string message, CancellationToken cancellationToken)
+    public async Task<bool> SendAsync(string name, string email, string organisation, string role, string message, CancellationToken cancellationToken)
     {
         var settings = options.Value;
         var delivery = deliveryOptions.Value;
@@ -29,7 +29,7 @@ public sealed class MailerSendContactMailer(
             ["to"] = delivery.Recipients.Select(address => new { email = address.Trim() }).ToArray(),
             ["reply_to"] = new { email, name },
             ["subject"] = "Website enquiry | Moss Harper",
-            ["text"] = $"Name: {name}\nEmail: {email}\nOrganisation: {organisation}\n\nMessage:\n{message}"
+            ["text"] = $"Name: {name}\nEmail: {email}\nOrganisation: {organisation}\nRole: {role}\n\nMessage:\n{message}"
         };
         if (delivery.TestCopyRecipients.Length > 0)
             body["bcc"] = delivery.TestCopyRecipients.Select(address => new { email = address.Trim() }).ToArray();
