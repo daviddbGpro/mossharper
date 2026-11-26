@@ -14,7 +14,7 @@ For Gmail delivery, Julian must enable 2-Step Verification and create a Google a
 GmailSmtp__AppPassword=the-generated-app-password
 ```
 
-The Gmail username, Julian's recipient address, and David's temporary BCC test copy are in `appsettings.json`. Remove `ContactDelivery:TestCopyRecipients` after testing. Use a Google app password, never Julian's normal Gmail password. Google may not offer app passwords for accounts with Advanced Protection or some other security settings. The form reports success after Gmail's SMTP server accepts the message; that is not a final delivery guarantee.
+The Gmail username and Julian's recipient address are in `appsettings.json`. No test BCC recipient is configured. Use a Google app password, never Julian's normal Gmail password. Google may not offer app passwords for accounts with Advanced Protection or some other security settings. The form reports success after Gmail's SMTP server accepts the message; that is not a final delivery guarantee.
 
 If Julian later has a verified sending domain and chooses MailerSend, set `ContactDelivery__Provider=MailerSend`, `MailerSend__FromEmail` and `MailerSend__ApiToken`. The existing recipient and BCC settings remain in `ContactDelivery`.
 

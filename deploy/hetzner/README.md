@@ -21,7 +21,7 @@ docker compose -f deploy/hetzner/compose.yaml up -d --build
 docker compose -f deploy/hetzner/compose.yaml ps
 ```
 
-Enter the app password as `GmailSmtp__AppPassword` in `.env`. The Compose file selects Gmail port 587 with STARTTLS. Wait for Caddy to obtain the HTTPS certificate, then open `https://mossharper.com` and test the contact form. Check both recipients and the app logs:
+Enter the app password as `GmailSmtp__AppPassword` in `.env`. The Compose file selects Gmail port 587 with STARTTLS. Wait for Caddy to obtain the HTTPS certificate, then open `https://mossharper.com` and test the contact form. Check Julian's inbox and the app logs:
 
 ```bash
 docker compose -f deploy/hetzner/compose.yaml logs --tail=100 app caddy
